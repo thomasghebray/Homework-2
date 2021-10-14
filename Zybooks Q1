@@ -1,0 +1,21 @@
+password = input('')
+final_password = ''
+i = 0
+while i < len(password):
+    ch = password[i]
+    if ch == 'i':
+        final_password += '!'
+    elif ch == 'a':
+        final_password += '@'
+    elif ch == 'm':
+        final_password += 'M'
+    elif ch == 'B':
+        final_password += '8'
+    elif ch == 'o':
+        final_password += '.'
+    else:
+        final_password += ch
+    i += 1
+
+final_password += "q*s"
+print(final_password)
