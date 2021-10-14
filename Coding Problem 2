@@ -1,0 +1,33 @@
+# Student Name: Thomas Ghebray
+# People Soft ID: 1889967
+
+# I will first need the .txt file that Mr.Lendasse uploaded
+input_file=open(input_file.txt)
+# I will now need the output of the input_file so that I can out it now with the parsedDates.txt
+output_file=open(paseddates.txt)
+# Enter the months that I want to include in my output
+months = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November',
+          'December']
+
+# This code will allow me to read all input codes and distinguish which ones I need split (-1)
+for each in input_file:
+   if each!="-1":
+    lis = each.split()
+    if len(lis) >= 3:
+        month = lis[0]
+        day = lis[1]
+        year = lis[2]
+
+    # This line of code will allow me as the user to distinguish which code is lower in the months category
+    if month.lower() in month_list:
+        comma = day[-1]
+    if comma == ',':
+        day = day[:len(day) - 1]
+        month_number = month_list[month.lower()]
+        ans = month_number + "/" + day + "/" + year
+
+# Now finally this code will allow me to output the final code into my solution
+        output_file.write(ans)
+        output_file.write("\n")
+        
+    
